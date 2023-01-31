@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Luck</title>
+    <style>
+      .top{
+        padding-left: 15%;
+        margin-top: 300px;
+        background-color: black;
+      }
+      body{
+        background-color: black;
+      }
+      .img{
+        display: block;
+        margin-top: -235px;
+        position: relative;
+        text-align: center;
+        color: #95f31b;
+      }
+      .when-click{
+        margin-bottom:100px;
+      }
+       p{
+        position: absolute;
+  top: 7%;
+  left: 50%;
+  font-size: 30px;
+  font-weight: 1000;
+  transform: translate(-50%, -50%);
+      }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(1)" class="card1" >
+            <p class="text1">rghdgb</p></div>
+            <div class="img">
+            <img  src="./card.jpg" alt="card" onclick="myfunction(2)" class="card2">
+            <p class="text2">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(3)" class="card3">
+            <p class="text3">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(4)" class="card4">
+            <p class="text4">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(5)" class="card5">
+            <p class="text5">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(6)" class="card6">
+            <p class="text6">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(7)" class="card7">
+            <p class="text7">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(8)" class="card8">
+            <p class="text8">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(9)" class="card9">
+            <p class="text9">rghdgb</p></div>
+            <div class="img">
+            <img src="./card.jpg" alt="card" onclick="myfunction(10)" class="card10">
+            <p class="text10">rghdgb</p></div>
+            <div class="img">
+              <img src="./card.jpg" alt="card">
+              </div>
+        </div>
+    </div>
+    <script>
+        function myfunction(val){
+            var arr=["Lucky day","Hardwork","Fear","Succes","Without fear","Sad","Happy"];
+                   const random=arr[(Math.floor(Math.random()*(arr.length)))];
+            document.querySelector(`.card${val}`).classList.toggle("when-click"); 
+             document.querySelector(`.text${val}`).innerHTML=random; 
+            console.log(`.card${val}`);
+            // element.classList.toggle("mystyle");
+        }
+    </script>
+</body>
+</html>
